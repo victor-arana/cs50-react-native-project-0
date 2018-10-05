@@ -17,8 +17,12 @@ function newTodo() {
 function addToDo(){
   // 1. Create new li element.
   const toDo = document.createElement('li');
-  // 1.1. Add text to the new li element.
-  toDo.textContent = 'New TODO element';
+  // 1.1. Get the text content from the input.
+  const toDoText = document.getElementById('todo-text');
+  // 1.2. Add text to the new li element.
+  toDo.textContent = toDoText.value;
+  // 1.3. Reset the input's text value.
+  toDoText.value = null;
   // 2. Grab a reference to the todo-list.
   // 3. Add the new element to the todo-list.
   list.appendChild(toDo);
