@@ -10,7 +10,8 @@ const itemCountSpan = document.getElementById('item-count')
 const uncheckedCountSpan = document.getElementById('unchecked-count')
 
 function newTodo() {
-  addToDo();  
+  addToDo();
+  updateItemCount();  
 }
 
 function addToDo(){
@@ -21,4 +22,9 @@ function addToDo(){
   // 2. Grab a reference to the todo-list.
   // 3. Add the new element to the todo-list.
   list.appendChild(toDo);
+}
+
+function updateItemCount(){
+  // 1. Grab a reference to the itemGroupSpan.
+  // 2. Update text with new count.
 }
