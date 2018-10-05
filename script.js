@@ -27,4 +27,15 @@ function addToDo(){
 function updateItemCount(){
   // 1. Grab a reference to the itemGroupSpan.
   // 2. Update text with new count.
+  itemCountSpan.textContent = incrementCount();
 }
+
+const incrementCount = (
+    () => {
+      let count = 0;
+      return () => {
+        count = count + 1;
+        return count;
+      }
+    }
+  )();
