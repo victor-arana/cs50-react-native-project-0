@@ -8,10 +8,17 @@ const classNames = {
 const list = document.getElementById('todo-list')
 const itemCountSpan = document.getElementById('item-count')
 const uncheckedCountSpan = document.getElementById('unchecked-count')
+const inputText = document.getElementById('todo-text');
 
 function newTodo() {
-  addToDo();
-  updateItemCount();  
+  if(inputIsValid(inputText.value)){
+    addToDo();
+    updateItemCount();  
+  }
+}
+
+function inputIsValid(input){
+  return (toDoText !== null) && (toDoText !== undefined);
 }
 
 function addToDo(){
